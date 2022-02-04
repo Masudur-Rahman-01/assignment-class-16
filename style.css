@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Orbitron:wght@700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --shadow-1: 0.125rem .25rem rgba(0,0,0, .075);
+    --shadow-2: 0 .5rem 1rem rgba(0,0,0, .15);
+    --shadow-3:  0 1rem 3rem rgba(0,0,0, .175);
+
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background: #e9e9e9;
+    font-family: poppins;
+}
+.banner{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTn-I0rkSqLhGcB2uI4AaCGUhUFOQgJZQwCQ&usqp=CAU');  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .banner-content{
+    width: 37.5rem;
+    text-align: center;
+}
+
+.banner .banner-content .banner-header h3{
+    font-size: 3rem;
+    color: white;
+    font-weight: 600;
+}
+
+.banner .banner-content .banner-body{
+    font-size: 1.1rem;
+    color: white;
+}
+.banner .banner-content .banner-body a{
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: .7rem 1.2rem;
+    margin-top: 1rem;
+    box-shadow: var(--shadow-2);
+    border-radius: .25rem;
+}
+
+/* Modal section for css start here*/
+.for-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255, .5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-7.5rem);
+    transition: all 0.3s ease-in-out;
+    box-shadow: var(--shadow-3);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.for-modal.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.for-modal .modal-content{
+    background: #fff;
+    width: 31.25rem;
+    
+    border-radius: .5rem;
+    box-shadow: var(--shadow-3);
+}
+
+.for-modal .modal-content .modal-header{
+    padding: .6rem 1.2rem;
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: space-between;
+}
+
+.for-modal .modal-content .modal-header .close{
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    background: rgba(190, 190, 190, 0.349);
+    padding: 0 .8rem;
+    border-radius: 50%;  
+}
+
+.for-modal .modal-content .modal-body{
+    padding: .6rem 1.2rem;
+    
+}
+.for-modal .modal-content .modal-footer{
+    padding: .6rem 1.2rem;
+    border-top: 1px solid #e9e9e9;   
+}
+/* Modal section for css end here*/
+
+
+/* Alert section for css start here */
+.for-alert{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255, .5);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-3);
+    display: none;
+}
+
+.for-alert .alert-content{
+    background: #fff;
+    width: 500px;
+    border-radius: .5rem;
+    box-shadow: var(--shadow-3);
+}
+
+.for-alert .alert-content .alert-header{
+    padding: .6rem 1.2rem;
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: space-between;
+}
+
+.for-alert .alert-content .alert-header .close{
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+    background: rgba(190, 190, 190, 0.349);
+    padding: 0 .8rem;
+    border-radius: 50%;   
+}
+
+.for-alert .alert-content .alert-body{
+    padding: .6rem 1.2rem;
+}
+
+.for-alert .alert-content .alert-body .buttons{
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.for-alert .alert-content .alert-body .buttons a{
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: .8rem;
+}
+
+.for-alert .alert-content .alert-body .buttons a:nth-child(1){
+    color: #1E6ED8;   
+}
+
+.for-alert .alert-content .alert-body .buttons a:nth-child(2){
+    color: white;
+    background: #1E6ED8;
+}
+/* Alert section for css end here */
+
+/* Accordion Css start here */
+.for-accordion{
+    width: 600px;
+    margin: 2rem auto;
+}
+
+.for-accordion .accordion-item{
+    background: #fff;
+    margin-bottom: .6rem;
+    border-radius: .5rem;
+    box-shadow: var(--shadow-2);
+}
+
+.for-accordion .accordion-item .accordion-header{
+    padding: .8rem 1rem;
+    border-bottom: 1px solid #e9e9e9;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.for-accordion .accordion-item .accordion-header::after{
+    content: '\2304';
+    position: absolute;
+    right: 1rem;
+    top: -.4rem;
+    font-size: 1.8rem;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.for-accordion .accordion-item .accordion-header.active::after{
+    transform: rotate(180deg);
+    top: .6rem;
+    transition: 0.3s;
+}
+
+.for-accordion .accordion-item .accordion-body{
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.for-accordion .accordion-item .accordion-body .accordion-content{
+    padding: 1rem 1.25rem;
+}
+/* Accordion Css end here */
+
+
+
