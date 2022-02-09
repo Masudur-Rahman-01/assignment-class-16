@@ -1,6 +1,6 @@
 // Js code for modal start here
 const add_modal = document.getElementById('add_modal')
-const keep = document.getElementById('keep_editing')
+const keep = document.getElementById('keep-editing')
 const discard = document.getElementById('discard')
 const modal = document.querySelector('.for-modal')
 const modal_close = document.querySelector('.for-modal .close')
